@@ -1,0 +1,7 @@
+library(cluster)
+pam.result<-pam(iris,3)
+print(pam.result)
+table(pam.result$clustering,iris$Species)
+pdf("Z.pdf")
+plot(pam.result)
+redev.off()
